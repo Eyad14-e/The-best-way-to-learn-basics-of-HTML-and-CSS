@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Be a Professional in HTML and CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic CSS for layout */
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #007bff;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .cta-button {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .chapter {
+            margin-bottom: 40px;
+        }
+
+        pre {
+            background-color: #282c34;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Toggle button and collapsed class */
+        #toggle-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+        }
+
+        #toggle-button:hover {
+            background-color: #0056b3;
+        }
+
+        #toc.collapsed {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Table of Contents</h2>
+        <button id="toggle-button">Show More</button>
+        <div id="toc" class="collapsed">
+            <ul>
+                <li><a href="#chapter1">Chapter 1: Basics</a></li>
+                <li><a href="#chapter2">Chapter 2: HTML Fundamentals</a></li>
+                <li><a href="#chapter3">Chapter 3: CSS Fundamentals</a></li>
+                <li><a href="#chapter4">Chapter 4: Layout & Positioning</a></li>
+                <li><a href="#chapter5">Chapter 5: Responsive Design</a></li>
+                <li><a href="#chapter6">Chapter 6: Advanced CSS</a></li>
+                <li><a href="#chapter7">Chapter 7: Best Practices</a></li>
+                <li><a href="#chapter8">Chapter 8: Projects</a></li>
+                <li><a href="#chapter9">Chapter 9: Debugging</a></li>
+                <li><a href="#chapter10">Chapter 10: Career Growth</a></li>
+                <li><a href="#chapter11">Chapter 11: SEO Optimization</a></li>
+                <li><a href="#chapter12">Chapter 12: Version Control with Git</a></li>
+                <li><a href="#chapter13">Chapter 13: CSS Frameworks</a></li>
+                <li><a href="#chapter14">Chapter 14: Accessibility in Web Design</a></li>
+                <li><a href="#chapter15">Chapter 15: Integrating with JavaScript</a></li>
+                <li><a href="#chapter16">Chapter 16: Web Performance Optimization</a></li>
+                <li><a href="#chapter17">Chapter 17: Web Security Basics</a></li>
+                <li><a href="#chapter18">Chapter 18: Collaborative Development</a></li>
+                <li><a href="#chapter19">Chapter 19: Progressive Web Apps (PWA)</a></li>
+                <li><a href="#chapter20">Chapter 20: Continuous Learning and Staying Updated</a></li>
+                <li><a href="#chapter21">Chapter 21: Mobile First Design</a></li>
+                <li><a href="#chapter22">Chapter 22: Cross-Browser Compatibility</a></li>
+                <li><a href="#chapter23">Chapter 23: Web Animation Techniques</a></li>
+                <li><a href="#chapter24">Chapter 24: Building RESTful APIs</a></li>
+                <li><a href="#chapter25">Chapter 25: Using Task Runners and Build Tools</a></li>
+                <li><a href="#chapter26">Chapter 26: Web Hosting & Deployment</a></li>
+                <li><a href="#chapter27">Chapter 27: Version Control with GitHub</a></li>
+                <li><a href="#chapter28">Chapter 28: Integrating CSS with SASS/SCSS</a></li>
+                <li><a href="#chapter29">Chapter 29: CSS Grid vs. Flexbox</a></li>
+                <li><a href="#chapter30">Chapter 30: Building a Real-World Project</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="intro" class="hero">
+            <h1>How to Be a Professional in HTML and CSS</h1>
+            <p>Master HTML & CSS and build professional websites with ease.</p>
+            <a href="#chapter1" class="cta-button">Start Learning</a>
+        </section>
+
+        <!-- Chapter Sections -->
+        <section id="chapter1" class="chapter">
+            <h2>Chapter 1: Understanding the Basics</h2>
+            <p>In this chapter, you'll learn what HTML is, how it forms the structure of a webpage, and how to create your first HTML page.</p>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;First HTML Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;p&gt;Welcome to HTML basics.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter2" class="chapter">
+            <h2>Chapter 2: HTML Fundamentals</h2>
+            <p>This chapter covers basic elements in HTML like forms, links, images, and lists, which are crucial for every webpage.</p>
+            <pre><code>
+&lt;form action="submit.php" method="POST"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter3" class="chapter">
+            <h2>Chapter 3: CSS Fundamentals</h2>
+            <p>Learn the basics of styling with CSS, including properties such as color, fonts, and layout.</p>
+            <pre><code>
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 2em;
+}
+            </code></pre>
+        </section>
+
+        <section id="chapter4" class="chapter">
+            <h2>Chapter 4: Layout & Positioning</h2>
+            <p>In this chapter, we dive into layout techniques like Flexbox and Grid to structure a webpage.</p>
+            <pre><code>
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    flex: 1;
+    padding: 20px;
+}
+            </code></pre>
+        </section>
+
+        <section id="chapter5" class="chapter">
+            <h2>Chapter 5: Responsive Design</h2>
+            <p>Learn how to make your websites responsive and adaptable to different screen sizes using media queries.</p>
+            <pre><code>
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="chapter6" class="chapter">
+            <h2>Chapter 6: Advanced CSS</h2>
+            <p>In this chapter, we explore advanced CSS techniques, including animations and transformations.</p>
+            <pre><code>
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.element {
+    animation: slide 2s ease-in-out;
+}
+            </code></pre>
+        </section>
+
+        <section id="chapter7" class="chapter">
+            <h2>Chapter 7: Best Practices</h2>
+            <p>This chapter covers essential best practices in HTML and CSS for clean, efficient code.</p>
+            <pre><code>
+/* Use semantic HTML tags */
+<header>Header content</header>
+<article>Article content</article>
+<main>Main content</main>
+            </code></pre>
+        </section>
+
+        <section id="chapter8" class="chapter">
+            <h2>Chapter 8: Projects</h2>
+            <p>Learn how to build projects to enhance your skills and showcase your knowledge in HTML and CSS.</p>
+            <pre><code>
+<!-- Example of a simple project structure -->
+&lt;div class="project"&gt;
+    &lt;h2&gt;Project Title&lt;/h2&gt;
+    &lt;p&gt;This is a description of the project.&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter9" class="chapter">
+            <h2>Chapter 9: Debugging</h2>
+            <p>Understand how to troubleshoot issues in your HTML and CSS code.</p>
+            <pre><code>
+<!-- Example of debugging a misaligned element -->
+&lt;div class="container"&gt;
+    &lt;div class="item"&gt;Content 1&lt;/div&gt;
+    &lt;div class="item"&gt;Content 2&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter10" class="chapter">
+            <h2>Chapter 10: Career Growth</h2>
+            <p>Learn how to advance your web development career and keep your skills up to date.</p>
+            <pre><code>
+<!-- Example of building a portfolio -->
+&lt;section class="portfolio"&gt;
+    &lt;h2&gt;My Projects&lt;/h2&gt;
+    &lt;div class="project"&gt;
+        &lt;h3&gt;Project 1&lt;/h3&gt;
+        &lt;p&gt;Description of the project.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+            </code></pre>
+        </section>
+
+        <!-- Chapter 11 to 30 -->
+        <section id="chapter11" class="chapter">
+            <h2>Chapter 11: SEO Optimization</h2>
+            <p>Improve the visibility of your website on search engines through HTML structure and meta tags.</p>
+            <pre><code>
+&lt;meta name="description" content="Learn HTML & CSS for web development"&gt;
+&lt;meta name="keywords" content="HTML, CSS, Web Development"&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter12" class="chapter">
+            <h2>Chapter 12: Version Control with Git</h2>
+            <p>Understand how to use Git for tracking code changes and collaborating with other developers.</p>
+            <pre><code>
+git init
+git add .
+git commit -m "Initial commit"
+git push origin main
+            </code></pre>
+        </section>
+
+        <section id="chapter13" class="chapter">
+            <h2>Chapter 13: CSS Frameworks</h2>
+            <p>Learn how CSS frameworks like Bootstrap help speed up web development.</p>
+            <pre><code>
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter14" class="chapter">
+            <h2>Chapter 14: Accessibility in Web Design</h2>
+            <p>Make your website accessible to all users, including those with disabilities, using best practices in HTML and CSS.</p>
+            <pre><code>
+&lt;button aria-label="Close"&gt;X&lt;/button&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter15" class="chapter">
+            <h2>Chapter 15: Integrating with JavaScript</h2>
+            <p>Learn how HTML and CSS integrate with JavaScript to create dynamic web applications.</p>
+            <pre><code>
+&lt;button onclick="alert('Hello, World!')"&gt;Click me&lt;/button&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter16" class="chapter">
+            <h2>Chapter 16: Web Performance Optimization</h2>
+            <p>Optimize your website for better performance and faster loading times.</p>
+            <pre><code>
+&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter17" class="chapter">
+            <h2>Chapter 17: Web Security Basics</h2>
+            <p>Learn the basics of securing your website and protecting user data.</p>
+            <pre><code>
+&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self';"&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter18" class="chapter">
+            <h2>Chapter 18: Collaborative Development</h2>
+            <p>Understand how to collaborate effectively with other developers using version control and project management tools.</p>
+            <pre><code>
+git branch feature-xyz
+git merge feature-xyz
+            </code></pre>
+        </section>
+
+        <section id="chapter19" class="chapter">
+            <h2>Chapter 19: Progressive Web Apps (PWA)</h2>
+            <p>Learn how to turn your website into a Progressive Web App for a more app-like experience.</p>
+            <pre><code>
+&lt;link rel="manifest" href="manifest.json"&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter20" class="chapter">
+            <h2>Chapter 20: Continuous Learning and Staying Updated</h2>
+            <p>Discover ways to continue learning and stay updated with the latest trends in web development.</p>
+            <pre><code>
+&lt;a href="https://developer.mozilla.org"&gt;MDN Web Docs&lt;/a&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter21" class="chapter">
+            <h2>Chapter 21: Mobile First Design</h2>
+            <p>Design your websites with mobile-first principles to ensure they work well on all devices.</p>
+            <pre><code>
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="chapter22" class="chapter">
+            <h2>Chapter 22: Cross-Browser Compatibility</h2>
+            <p>Learn how to ensure your website looks consistent across different browsers.</p>
+            <pre><code>
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+            </code></pre>
+        </section>
+
+        <section id="chapter23" class="chapter">
+            <h2>Chapter 23: Web Animation Techniques</h2>
+            <p>Explore advanced CSS animations to enhance your website's interactivity and user experience.</p>
+            <pre><code>
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="chapter24" class="chapter">
+            <h2>Chapter 24: Building RESTful APIs</h2>
+            <p>Learn how to create a simple API and integrate it with your HTML & CSS pages.</p>
+            <pre><code>
+app.get('/api/data', (req, res) =&gt; {
+    res.json({ message: 'Hello, world!' });
+});
+            </code></pre>
+        </section>
+
+        <section id="chapter25" class="chapter">
+            <h2>Chapter 25: Using Task Runners and Build Tools</h2>
+            <p>Learn how to automate tasks and optimize your workflow using tools like Gulp and Webpack.</p>
+            <pre><code>
+gulp.task('default', function() {
+    gulp.src('src/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
+            </code></pre>
+        </section>
+
+        <section id="chapter26" class="chapter">
+            <h2>Chapter 26: Web Hosting & Deployment</h2>
+            <p>Understand how to host and deploy your website to live servers.</p>
+            <pre><code>
+git push heroku master
+            </code></pre>
+        </section>
+
+        <section id="chapter27" class="chapter">
+            <h2>Chapter 27: Version Control with GitHub</h2>
+            <p>Learn how to use GitHub for hosting repositories and collaborating with others.</p>
+            <pre><code>
+git clone https://github.com/username/repo.git
+git pull origin main
+            </code></pre>
+        </section>
+
+        <section id="chapter28" class="chapter">
+            <h2>Chapter 28: Integrating CSS with SASS/SCSS</h2>
+            <p>Enhance your CSS workflow with SASS/SCSS for more advanced features like variables and nesting.</p>
+            <pre><code>
+$primary-color: #007bff;
+
+body {
+    background-color: $primary-color;
+}
+            </code></pre>
+        </section>
+
+        <section id="chapter29" class="chapter">
+            <h2>Chapter 29: CSS Grid vs. Flexbox</h2>
+            <p>Understand when to use CSS Grid and Flexbox for responsive layouts.</p>
+            <pre><code>
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+            </code></pre>
+        </section>
+
+        <section id="chapter30" class="chapter">
+            <h2>Chapter 30: Building a Real-World Project</h2>
+            <p>Put everything you've learned into practice by building a real-world project.</p>
+            <pre><code>
+&lt;div class="project"&gt;
+    &lt;h2&gt;Project Title&lt;/h2&gt;
+    &lt;p&gt;Description of the project.&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('toggle-button').addEventListener('click', function() {
+            const toc = document.getElementById('toc');
+            toc.classList.toggle('collapsed');
+            this.textContent = toc.classList.contains('collapsed') ? 'Show More' : 'Show Less';
+        });
+    </script>
+</body>
+</html>
